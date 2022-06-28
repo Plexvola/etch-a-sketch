@@ -6,9 +6,7 @@
 	flex-wrap: wrap;
 }
 
-div {
+.cell {
 	padding: 0px;
 	margin: 0px;
-	opacity: 1;
-	color: black;
 }

@@ -24,9 +24,10 @@ function createGrid(grid, value) {
 	for(let i=0; i<value; i++){
 		for(let j=0; j<value; j++){
 			let div = document.createElement('div');
+			div.classList.add('cell')
 			div.style.width = nodeside + 'px';
 			div.style.height = nodeside + 'px';
-			div.textContent = i + ';' + j;
+			// div.textContent = i + ';' + j;
 			grid.appendChild(div);
 		}
 	}
