@@ -33,10 +33,24 @@ function createGrid(grid, value) {
 	}
 }
 
+function addHoverListener() {
+	let cells = document.querySelectorAll('.cell');
+
+	for(let i=0; i<cells.length; i++) {
+		cells[i].addEventListener('mouseenter', (e) => {
+			console.log(e.target.style);
+			e.target.style.backgroundColor = 'blue';
+			console.log(e.target.style);
+		});
+	}
+}
+
 createGrid(grid, slider.value);
+addHoverListener();
 
 slider.addEventListener('input', () => {
 	removeNodes(grid);
 	createGrid(grid, slider.value);
 	console.log(slider.value);
+	addHoverListener();
 });
